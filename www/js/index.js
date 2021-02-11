@@ -21,11 +21,24 @@
 // See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
 document.addEventListener('deviceready', onDeviceReady, false);
 
-function loginFunc() {
-    var user = document.getElementById("username").value;
-    var pass = document.getElementById("password").value;
+var username = document.getElementById("username");
+var password = document.getElementById("password");
+var errorMessage = document.getElementById("errorMessage");
+var button = document.getElementById("loginButton");
 
-    alert("Congratulations, you won an IPad Pro 3000!")
+function loginProcess() {
+    if (username.value == "" || password.value == "") {
+        errorMessage.style.visibility = "visible";
+    } else {
+        errorMessage.style.visibility = "hidden";
+        if (checkUser()) {
+            alert("Logged in successfully");
+        }
+    }
+}
+
+function checkUser() {
+    return true;
 }
 
 function onDeviceReady() {
@@ -33,6 +46,6 @@ function onDeviceReady() {
 
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
 
-    var button = document.getElementById("loginButton").onclick = loginFunc;
+    button.onclick = loginProcess;
 
 }

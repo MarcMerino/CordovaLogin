@@ -75,7 +75,7 @@ h2 {
     border-radius: 10px 10px 0px 0px;
 }
 
-.items:focus {
+.login .items:focus {
     outline: none;
 }
 
@@ -91,12 +91,16 @@ h2 {
     border-radius: 10px 10px 0px 0px;
 }
 
+.login .button:focus {
+    outline: none;
+}
+
 .login .button:hover {
     background-color: lightyellow;
     color: orange;
 }
 
-.passwordMessage {
+.errorMessage {
     visibility: hidden;
     margin: 2px 0px 5px 18px;
     padding: 0px;

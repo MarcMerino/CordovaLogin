@@ -24,7 +24,7 @@ document.addEventListener('deviceready', onDeviceReady, false);
 var username = document.getElementById("username");
 var password = document.getElementById("password");
 var confirmPassword = document.getElementById("confirmpassword");
-var passwordMessage = document.getElementById("passwordMessage");
+var passwordMessage = document.getElementById("errorMessage");
 var email = document.getElementById("email");
 
 function registerProcess() {
