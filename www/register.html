@@ -27,23 +27,31 @@
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="css/index.css">
 
-        <title>Apache Cordova</title>
+        <title>Log In | Sign In</title>
     </head>
     <body>
         <div class="app">
             <div class="login">
                 <h1>APACHE CORDOVA</h1>
+                <h2>Create a new account:</h2>
+                <input class="items" type="text" id="firstName" placeholder="First Name">
+                <input class="items" type="text" id="lastName" placeholder="Last Name">
+                <input class="items" type="text" id="email" placeholder="Email">
                 <input class="items" type="text" id="username" placeholder="Username">
                 <input class="items" type="password" id="password" placeholder="Password">
-                <button class="button" id="loginButton">Log In</button>
+                <input class="items" type="password" id="confirmpassword" placeholder="Confirm password">
+                <p class="passwordMessage" id="passwordMessage">Passwords doesn't match</p>
+                <button class="button" id="registerButton">Register</button>
             </div>
             <div>
-                <p>You don't have an account? <a href="./register.html">Create one here</a></p>
+                <p>You already have an account? <a href="./index.html">Log in</a></p>
             </div>
         </div>
         <script src="cordova.js"></script>
-        <script src="js/index.js"></script>
+        <script src="js/register.js"></script>
     </body>
 </html>
