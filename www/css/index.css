@@ -57,7 +57,10 @@ h2 {
     width: 325px;
     padding: 10px;
     margin-left: calc(50% - 162px);
-    margin-top: 12em;
+    margin-top: 16em;
+
+    position: relative;
+    z-index: 1;
 
     background-color: #222222;
 
@@ -111,4 +114,11 @@ h2 {
     padding: 0px;
     text-align: left;
     color: #e26d3d;
+}
+
+.canvas {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
 }

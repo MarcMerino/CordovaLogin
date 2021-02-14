@@ -2,12 +2,12 @@
 // See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
 document.addEventListener('deviceready', onDeviceReady, false);
 
+var formDiv = document.getElementById("form");
+
 var username = document.getElementById("username");
 var password = document.getElementById("password");
 var errorMessage = document.getElementById("errorMessage");
 var button = document.getElementById("loginButton");
-
-var registerLink = document.getElementById("registerLink");
 
 function loginProcess() {
     if (username.value == "" || password.value == "") {
@@ -41,6 +41,11 @@ function onDeviceReady() {
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
 
     button.onclick = loginProcess;
-    registerLink.onclick = {}
+    formDiv.onkeyup = function(event) {
+        if (event.key === "Enter") {
+            button.click();
+        }
+    }
+    
 
 }

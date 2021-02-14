@@ -19,19 +19,20 @@
     </head>
     <body>
         <div class="app">
-            <div class="form">
+            <canvas id="canvas" class="canvas"></canvas>
+            <div class="form" id="form">
                 <h1>APACHE CORDOVA</h1>
                 <input class="items" type="text" id="username" placeholder="Username">
                 <input class="items" type="password" id="password" placeholder="Password">
                 <p class="errorMessage" id="errorMessage">Something's wrong. Please check the fields and try again.</p>
                 <button class="button" id="loginButton">Log In</button>
-            </div>
-            <div>
                 <p>You don't have an account? <a id="registerLink" href="./register.html">Create one here</a></p>
             </div>
         </div>
+
         <script src="cordova.js"></script>
         <script src="js/crypto-js.js"></script>
         <script src="js/index.js"></script>
+        <script src="js/particles.js"></script>
     </body>
 </html>

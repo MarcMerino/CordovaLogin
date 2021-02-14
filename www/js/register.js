@@ -4,6 +4,8 @@ document.addEventListener('deviceready', onDeviceReady, false);
 
 var validRegister = false;
 
+var formDiv = document.getElementById("form");
+
 var firstName = document.getElementById("firstName");
 var lastName = document.getElementById("lastName");
 var email = document.getElementById("email");
@@ -37,6 +39,12 @@ function onDeviceReady() {
     confirmPassword.oninput = checkPassword;
     password.oninput = checkPassword;
     email.oninput = checkEmail;
+
+    formDiv.onkeyup = function(event) {
+        if (event.key === "Enter") {
+            button.click();
+        }
+    }
 
 }
 
