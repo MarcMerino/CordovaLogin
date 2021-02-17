@@ -4,6 +4,9 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+let particleAmount = (canvas.width * canvas.height) / 4000;
+console.log(particleAmount);
+
 let particleArray = [];
 
 // Mouse:
@@ -80,7 +83,7 @@ class Particle {
 function init() {
     particleArray = [];
 
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i < particleAmount; i++) {
         let x = Math.random() * canvas.width;
         let y = Math.random() * canvas.height;
         
